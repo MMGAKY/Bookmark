@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="icon" href="pics/bookmark.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="header text-center">
+        <h1 class="">Bookmark</h1>
+        <div class="layer"></div>
+      </div>
+      <div class="box my-5">
+        <h2>
+          <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="cont text-center">
+          <div class="mb-4 text-start">
+            <label for="siteName" class="form-label pb-1 fw-semibold"
+              ><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label
+            >
+            <input
+              oninput="validationName()"
+              type="text"
+              class="form-control"
+              id="siteName"
+              placeholder="Bookmark Name"
+            />
+            <p
+              class="alert alert-danger py-1 mt-2 mb-0 small mx-auto d-none"
+              id="alertname"
+            >
+          This name has already used , Please try another.</p>
+          </div>
+          <div class="mb-2 text-start">
+            <label for="siteUrl" class="form-label pb-1 fw-semibold"
+              ><i class="fa-solid fa-link pe-2"></i> Site URL</label
+            >
+            <input
+              oninput="validationUrl()"
+              type="text"
+              class="form-control"
+              id="siteUrl"
+              placeholder="Website URL"
+            />
+            <p
+              class="alert alert-danger py-1 mt-2 mb-0 small mx-auto d-none"
+              id="alerturl"
+            >
+          Please Enter a Valid URL (https://www.example.com)</p>
+          </div>
+          <button class="btn btn-success px-5 my-4" onclick="addUrl()">
+            Submit
+          </button>
+        </div>
+      </div>
+      <div class="list my-3 bg-light">
+        <table class="text-center table cont py-3" id="inner">
+          <tr>
+            <td><h4>Index</h4></td>
+            <td><h4>Website Name</h4></td>
+            <td><h4>Visit</h4></td>
+            <td><h4>Delete</h4></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
