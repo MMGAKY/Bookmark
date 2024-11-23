@@ -71,7 +71,7 @@ function validationName() {
 
   if (regex.test(nameCheck)) {
     for (var i = 0; i < bookList.length; i++) {
-      if (nameCheck !== bookList[i].name) {
+      if (nameCheck != bookList[i].name) {
         siteNameInput.classList.add("is-valid");
         siteNameInput.classList.remove("is-invalid");
         userMsg.classList.remove("d-block");
@@ -84,6 +84,10 @@ function validationName() {
         return false;
       }
     }
+    siteNameInput.classList.add("is-valid");
+    siteNameInput.classList.remove("is-invalid");
+    userMsg.classList.remove("d-block");
+    userMsg.classList.add("d-none");
     return true;
   } else {
     siteNameInput.classList.add("is-invalid");
